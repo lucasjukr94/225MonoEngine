@@ -1,6 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoEngine.EngineUtil;
+using MonoEngine.Entities;
+using MonoEngine.Scenes;
 
 namespace MonoEngine
 {
@@ -11,7 +14,9 @@ namespace MonoEngine
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        
+
+        private World World;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -27,6 +32,7 @@ namespace MonoEngine
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            World = new World(0, (float) 9.81);
 
             base.Initialize();
         }
@@ -41,6 +47,7 @@ namespace MonoEngine
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            World.Load(Content);
         }
 
         /// <summary>
@@ -63,6 +70,7 @@ namespace MonoEngine
                 Exit();
 
             // TODO: Add your update logic here
+            World.Update();
 
             base.Update(gameTime);
         }
@@ -76,6 +84,7 @@ namespace MonoEngine
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            World.Render(spriteBatch);
 
             base.Draw(gameTime);
         }
