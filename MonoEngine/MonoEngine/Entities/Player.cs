@@ -20,6 +20,8 @@ namespace MonoEngine.Entities
             this.Y = Y;
             this.Z = Z;
 
+            HasCollision = true;
+
             RenderPriority = 0;
 
             Texture2D = Content.Load<Texture2D>("");
@@ -28,7 +30,7 @@ namespace MonoEngine.Entities
         public override void Update()
         {
             Control();
-            Collision();
+            Collision(10);
         }
 
         public override void Control()
@@ -54,5 +56,11 @@ namespace MonoEngine.Entities
                 //TODO: Move entity
             }
         }
+
+        public override void CollisionRange(IEntity entity)
+        {
+            
+        }
+
     }
 }

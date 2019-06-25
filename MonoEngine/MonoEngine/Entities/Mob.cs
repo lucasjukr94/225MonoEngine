@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEngine.EngineUtil;
 
 namespace MonoEngine.Entities
 {
-    public class Tile : Entity, IEntity
+    public class Mob : Entity, IEntity
     {
-        public Tile(int Id, int X, int Y, int Z, ContentManager Content)
+        public Mob(int Id, int X, int Y, int Z, ContentManager Content)
         {
             this.Id = Id;
             this.X = X;
@@ -29,11 +28,17 @@ namespace MonoEngine.Entities
         public override void Update()
         {
             Collision(10);
+            Control();
+        }
+
+        public override void Control()
+        {
+            
         }
 
         public override void CollisionRange(IEntity entity)
         {
-
+            
         }
     }
 }
