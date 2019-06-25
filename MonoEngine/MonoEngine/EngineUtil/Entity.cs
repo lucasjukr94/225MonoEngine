@@ -30,6 +30,7 @@ namespace MonoEngine.EngineUtil
         public float Height { get; set; }
         public float Depth { get; set; }
         public CollisionBox CollisionBox { get; set; }
+
         public Texture2D Texture2D { get; set; }
 
         public Vector2 Vector2
@@ -40,10 +41,35 @@ namespace MonoEngine.EngineUtil
         public int RenderPriority { get; set; }
         public bool HasRender { get; set; }
 
-        public virtual void Update() { }
 
-        public virtual void Control() { }
+        public virtual void Update()
+        {
+            
+        }
 
-        public virtual void Collision() { }
+        public virtual void Control()
+        {
+            
+        }
+
+        public virtual void Collision()
+        {
+            
+        }
+    }
+
+    public interface IEntity
+    {
+        Texture2D Texture2D { get; set; }
+
+        Vector2 Vector2 { get; }
+
+        int RenderPriority { get; set; }
+
+        void Update();
+
+        void Control();
+
+        void Collision();
     }
 }

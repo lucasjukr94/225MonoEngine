@@ -11,7 +11,7 @@ using MonoEngine.EngineUtil;
 
 namespace MonoEngine.Entities
 {
-    public class Player : Entity
+    public class Player : Entity, IEntity
     {
         public Player(int Id, int X, int Y, int Z, ContentManager Content)
         {
@@ -53,11 +53,6 @@ namespace MonoEngine.Entities
             {
                 //TODO: Move entity
             }
-        }
-
-        public override void Collision()
-        {
-
         }
     }
 }

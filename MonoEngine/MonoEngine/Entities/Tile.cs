@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEngine.EngineUtil;
 
 namespace MonoEngine.Entities
 {
-    public class Tile : Entity
+    public class Tile : Entity, IEntity
     {
         public Tile(int Id, int X, int Y, int Z, ContentManager Content)
         {
@@ -28,9 +29,5 @@ namespace MonoEngine.Entities
             Collision();
         }
 
-        public override void Collision()
-        {
-            
-        }
     }
 }

@@ -11,7 +11,7 @@ using MonoEngine.Entities;
 
 namespace MonoEngine.Scenes
 {
-    public class World : Scene
+    public class World : Scene,IScene
     {
         public World(int Id, float Gravity)
         {
@@ -33,18 +33,5 @@ namespace MonoEngine.Scenes
             Tiles.Add(tile);
         }
 
-        public override void Update()
-        {
-            Players.OrderBy(x => x.RenderPriority).ToList().ForEach(e => e.Update());
-            Tiles.OrderBy(x => x.RenderPriority).ToList().ForEach(e => e.Update());
-        }
-
-        public override void Render(SpriteBatch spriteBatch)
-        {
-            spriteBatch.Begin();
-            Players.OrderBy(x => x.RenderPriority).ToList().ForEach(e => spriteBatch.Draw(e.Texture2D, e.Vector2));
-            Tiles.OrderBy(x => x.RenderPriority).ToList().ForEach(e => spriteBatch.Draw(e.Texture2D, e.Vector2));
-            spriteBatch.End();
-        }
     }
 }
