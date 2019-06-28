@@ -13,6 +13,8 @@ namespace MonoEngine.EngineUtil
         public virtual int Id { get; set; }
         public virtual float Gravity { get; set; }
 
+        public virtual bool TriggerOtherWorld { get; set; }
+
         public virtual void Load(ContentManager Content)
         {
             
@@ -38,6 +40,8 @@ namespace MonoEngine.EngineUtil
     {
         int Id { get; set; }
         float Gravity { get; set; }
+
+        bool TriggerOtherWorld { get; set; }
 
         void Load(ContentManager Content);
 

@@ -23,7 +23,7 @@ namespace MonoEngine.Entities
 
             RenderPriority = 0;
 
-            Texture2D = Content.Load<Texture2D>("");
+            Texture2D = Content.Load<Texture2D>("Koala");
         }
 
         public override void Update()

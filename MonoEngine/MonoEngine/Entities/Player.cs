@@ -24,7 +24,7 @@ namespace MonoEngine.Entities
 
             RenderPriority = 0;
 
-            Texture2D = Content.Load<Texture2D>("");
+            Texture2D = Content.Load<Texture2D>("Koala");
         }
 
         public override void Update()
@@ -38,22 +38,22 @@ namespace MonoEngine.Entities
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
                 Keyboard.GetState().IsKeyDown(Keys.Up))
             {
-                //TODO: Move entity
+                Y--;
             }
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
                 Keyboard.GetState().IsKeyDown(Keys.Down))
             {
-                //TODO: Move entity
+                Y++;
             }
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
                 Keyboard.GetState().IsKeyDown(Keys.Left))
             {
-                //TODO: Move entity
+                X--;
             }
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
                 Keyboard.GetState().IsKeyDown(Keys.Right))
             {
-                //TODO: Move entity
+                X++;
             }
         }
 

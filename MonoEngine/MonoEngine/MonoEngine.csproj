@@ -42,11 +42,11 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="EngineUtil\CollisionBox.cs" />
     <Compile Include="EngineUtil\Entity.cs" />
     <Compile Include="EngineUtil\Scene.cs" />
     <Compile Include="EngineUtil\Shape.cs" />
     <Compile Include="Entities\Building.cs" />
+    <Compile Include="Entities\Mob.cs" />
     <Compile Include="Entities\Player.cs" />
     <Compile Include="Entities\Tile.cs" />
     <Compile Include="Game1.cs" />
@@ -112,6 +112,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Koala.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

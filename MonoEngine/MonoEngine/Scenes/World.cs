@@ -20,6 +20,8 @@ namespace MonoEngine.Scenes
             Players = new List<Player>();
             Tiles = new List<Tile>();
             Mobs = new List<Mob>();
+
+            TriggerOtherWorld = false;
         }
 
         public List<Player> Players { get; set; }
